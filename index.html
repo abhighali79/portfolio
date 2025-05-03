@@ -1,100 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhi's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="main.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abhishek Ghali - Portfolio</title>
    
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
-<body>
-    <nav>
-        <div id="content1">
-        <a href=""><img src="main.png" alt="logo" id="logo"></a>
-    </div>
-    <div id="content2">
-        <a href="">HOME</a>
-        <a href="#about">ABOUT</a>
-        <a href="#skill">SKILLS</a>
-    </div>
+<body class="bg-gray-950 text-white">
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-transparent">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-white font-bold text-2xl">
+                    <a href="#home" class="flex items-center gap-2">
+                        <span class="bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">
+                            Portfolio
+                        </span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8" id="desktop-nav">
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-white" aria-label="Toggle menu">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden glass mt-3 rounded-lg p-4 absolute left-0 right-0 mx-4 bg-black/50 backdrop-blur">
+                <div class="flex flex-col space-y-4" id="mobile-nav">
+                </div>
+            </div>
+        </div>
     </nav>
-    <div id="container">
-        <div id="content3">👋Hi there, I am <h1>Abhishek Ghali</h1>Full Stack developer
+
+    <section id="home" class="container mx-auto px-4 min-h-screen flex items-center pt-20 lg:pt-0">
+        <div class="flex flex-col lg:flex-row items-center justify-between w-full">
+            <div class="lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+                    Hi, I'm
+                    <span class="bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">
+                        Abhishek Ghali
+                    </span>
+                </h1>
+                <h2 class="text-xl md:text-3xl font-semibold mb-6 text-gray-300">Full Stack Developer</h2>
+                <p class="text-gray-300 mb-8 max-w-lg mx-auto lg:mx-0 text-xl">
+                    I create beautiful, functional websites and applications with a focus on user experience.
+                    Let's build something amazing together.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                    <a
+                        href="/Abhishek's-Resume.pdf"
+                        download="abhi_Resume.pdf"
+                        class="glow-button px-6 py-3 rounded-full font-medium flex items-center justify-center gap-2 hover:shadow-lg transition-all"
+                    >
+                        <i data-lucide="download" class="w-4 h-4"></i>
+                        <button>
+                        Download Resume</button>
+                    </a>
+                    <a
+                        href="#projects"
+                        class="px-6 py-3 border-3   border-pink-500/30 rounded-full font-medium flex items-center justify-center gap-3  hover:bg-pink-500/10 transition-all " >
+                        View Projects
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                       
+                    </a>
+                </div>
+                <div class="flex items-center justify-center lg:justify-start gap-5 mt-8">
+                    <a href="https://github.com/abhighali79" target="_blank" aria-label="GitHub" class="text-gray-300 hover:text-white hover:scale-110 transition-all ">
+                       <i data-lucide="github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/abhishekghali" target="_blank" aria-label="LinkedIn" class="text-gray-300 hover:text-white hover:scale-110 transition-all">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                    <a href="https://twitter.com/yourhandle" target="_blank" aria-label="Twitter" class="text-gray-300 hover:text-white hover:scale-110 transition-all">
+                        <i data-lucide="twitter"></i>
+                    </a>
+                    <a href="https://instagram.com/abhi_ghali79" target="_blank" aria-label="Instagram" class="text-gray-300 hover:text-white hover:scale-110 transition-all">
+                        <i data-lucide="instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="lg:w-1/2 flex justify-center lg:justify-end">
+                <div class="relative">
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-indigo-500/30 p-1 bg-gradient-to-br from-pink-500/20 to-purple-500/20">
+                        <img
+                            src="./images/mainphoto.png"
+                            alt="Profile"
+                            class="w-full h-full object-cover rounded-full"
+                        />
+                    </div>
+                    <div class="absolute -z-10 top-0 left-0 w-full h-full rounded-full blur-3xl bg-gradient-to-r from-pink-600/20 to-purple-600/20 animate-pulse"></div>
+                </div>
+            </div>
         </div>
-        <img src="main.png" alt="">
+    </section>
 
-    </div>
-    <div id="about">
-        <h1 id="heading" >🧑‍💻 About Me</h1>
-        <p id="para">Hi, I’m Abhishek, a passionate and dedicated student with a strong interest in technology and software development. I love creating meaningful digital solutions, from web development to desktop applications. I’ve worked on several projects like Online Auction Systems, Student Result Analysis Portals, and Retail Dashboards, showcasing my skills in fullstack development, data processing, and user-friendly UI design.Proficient in front-end technologies like HTML, CSS, JavaScript, Bootstrap
-
-            Experienced with back-end tools such as PHP, Flask, Node.js, Express.js
-            
-            Knowledge of databases including MySQL and SQLite3
-            
-            Hands-on with data extraction, Excel automation, and PDF processing
-            
-            Developed desktop and web applications for student result tracking, customer management, and more</p>
-    </div>
-
-        <div id="skill"><h1 id="heading">🛠️Skills</h1>
-            <div id="skills">
-              <ul>
-                <li>HTML5</li>
-              </ul>
-              <ul>
-                <li>CSS</li>
-              </ul>
-              <ul>
-                <li>Java Script</li>
-              </ul>
-              <ul>
-                <li>Core Java</li>
-              </ul>
-              <ul>
-                <li>C Programming</li>
-              </ul>
-              <ul>
-                <li>Node Js</li>
-              </ul>
-              <ul>
-                <li>Express Js</li>
-              </ul><ul>
-                <li>React Js</li>
-              </ul>
-              <ul>
-                <li>Sql</li>
-              </ul>
-              <ul>
-                <li>Mongodb</li>
-              </ul>
-              
+    <section id="about" class="container mx-auto px-4 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                About <span class="bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">Me</span>
+            </h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-pink-500 to-violet-500 mx-auto"></div>
+            <p class="mt-4 text-gray-300 max-w-2xl mx-auto">
+                <h1 className="text-3xl font-semibold mb-4">Who I Am</h1>
+                <p className=" text-xl text-gray-300 mb-4 text-justify leading-[5.5]">
+                    I'm a passionate Full Stack Developer, functional websites and applications. My focus is on delivering exceptional user experiences through clean code and innovative design. When I'm not coding, you can find me exploring nature, reading tech blogs, or contributing to open-source projects. I believe in creating technology that makes a positive impact on people's lives. With a background in both front-end and back-end development, I bring a holistic approach to every project. I'm constantly learning and adapting to new technologies to stay at the forefront of web development.
+                </p>
+            </p>
         </div>
-    </div>
-<footer >
-    <div id="footer">
-      
-    <div id="socialmedia">
-        
-    <a href="https://www.instagram.com/abhi_ghali79?igsh=OG1lN2RjOHZkaHY2 "><i class="fa-brands fa-instagram fa-xl" style="color: #ffffff;"></i></a>
-    <a href="https://www.linkedin.com/in/abhishek-ghali-ba55842a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "><i class="fa-brands fa-linkedin fa-xl" style="color: #ffffff;"></i></a>
-    <a href="https://github.com/abhighali79"><i class="fa-brands fa-github fa-xl" style="color: #ffffff;"></i></a>
-    <a href="https://www.facebook.com/share/16NHBWu4to/ "><i class="fa-brands fa-facebook fa-xl" style="color: #ffffff;"></i></a>
-</div>
-            <h4 id="copyright">All Right's  Reserved by Abhishek Ghali</h4>
-</footer>
+    </section>
+    <section id="skills" class="container mx-auto px-4 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                My <span class="bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">Skills</span>
+            </h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-pink-500 to-violet-500 mx-auto"></div>
+            <p class="mt-4 text-gray-300 max-w-2xl mx-auto">
+                Hover over each skill to learn more about my experience and proficiency level.
+            </p>
+        </div>
+        <div id="skills-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        </div>
+    </section>
+    <section id="projects" class="container mx-auto px-4 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                My <span class="bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">Projects</span>
+            </h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-pink-500 to-violet-500 mx-auto"></div>
+            <p class="mt-4 text-gray-300 max-w-2xl mx-auto">
+                Here are some of my recent projects. Each represents unique challenges and solutions.
+            </p>
+        </div>
+        <div id="project-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        </div>
+    </section>
+
+    <section id="contact" class="container py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold mb-2">
+                Get In <span class="bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">Touch</span>
+            </h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-pink-500 to-violet-500 mx-auto mb-4"></div>
+            <p class="text-gray-300 max-w-xl mx-auto">
+                Have a project in mind or want to collaborate? Feel free to reach out!
+            </p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-5">
+                <div class="p-4 bg-gradient-to-br from-indigo-900/30 to-purple-900/30 rounded-3 shadow backdrop-blur-md">
+                    <h3 class="h5 mb-4">Contact Information</h3>
+                    <div class="d-flex align-items-start mb-3 text-white">
+                        <div class="p-2 rounded-circle bg-pink-500/20 text-pink-400 me-3"><i data-lucide="mail"></i></div>
+                        <div>
+                            <h6 class="mb-1 fw-bold">Email</h6>
+                            <p class="mb-0 text-gray-300">abhighali79@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start mb-3 text-white">
+                        <div class="p-2 rounded-circle bg-purple-500/20 text-purple-400 me-3"><i data-lucide="phone"></i></div>
+                        <div>
+                            <h6 class="mb-1 fw-bold">Phone</h6>
+                            <p class="mb-0 text-gray-300">+91-9845412665</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start mb-4 text-white">
+                        <div class="p-2 rounded-circle bg-indigo-500/20 text-indigo-400 me-3"><i data-lucide="map-pin"></i></div>
+                        <div>
+                            <h6 class="mb-1 fw-bold">Location</h6>
+                            <p class="mb-0 text-gray-300">Belagavi, Karnataka</p>
+                        </div>
+                    </div>
+                    <h6 class="mb-2">Follow Me</h6>
+                    <div class="d-flex gap-3">
+                        <a href="https://github.com/yourusername" target="_blank" class="p-2 rounded-circle bg-dark hover:bg-secondary">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-5 h-5" alt="GitHub" />
+                        </a>
+                        <a href="https://linkedin.com/in/abhishekghali" target="_blank" class="p-2 rounded-circle bg-dark hover:bg-secondary">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" class="w-5 h-5" alt="LinkedIn" />
+                        </a>
+                        <a href="https://instagram.com/abhi_ghali79" target="_blank" class="p-2 rounded-circle bg-dark hover:bg-secondary">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="w-5 h-5" alt="Instagram" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="p-4 bg-white/5 rounded-3 shadow backdrop-blur-md">
+                    <h3 class="h5 mb-4">Send a Message</h3>
+                    <div id="successMessage" class="alert alert-success d-none" role="alert">
+                        Message sent successfully!
+                    </div>
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <input type="text" name="name" class="form-control bg-dark text-white border-0" placeholder="Your Name" required />
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" name="email" class="form-control bg-dark text-white border-0" placeholder="Your Email" required />
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" name="subject" class="form-control bg-dark text-white border-0" placeholder="Subject" required />
+                        </div>
+                        <div class="mb-3">
+                            <textarea name="message" rows="4" class="form-control bg-dark text-white border-0" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary d-flex align-items-center gap-2">
+                            <i data-lucide="send" style="height: 18px;"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 py-10">
+        <div class="container mx-auto px-4 text-center text-gray-400">
+             &copy; 2025 Abhishek Ghali. All rights reserved.
+            <div class="mt-2">
+                <a href="https://yourwebsite.com/privacy" class="hover:text-pink-400 transition-colors text-sm">Privacy Policy</a>
+                <span class="mx-2 text-gray-600">•</span>
+                <a href="https://yourwebsite.com/terms" class="hover:text-pink-400 transition-colors text-sm">Terms of Service</a>
+                <span class="mx-2 text-gray-600">•</span>
+                <a href="https://yourwebsite.com/sitemap" class="hover:text-pink-400 transition-colors text-sm">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1nqEd00nN9l9qXOMnFzdsj/K6eZX9O" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  
+   
 </body>
-<script>
-    const close = document.querySelector(".close");
-const open = document.querySelector(".ham");
-const menu = document.querySelector(".menu");
-close.addEventListener("click", () => {
-  menu.style.visibility = "hidden";
-});
-open.addEventListener("click", () => {
-  menu.style.visibility = "visible";
-});
-</script>
 </html>
