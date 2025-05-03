@@ -107,7 +107,7 @@ const skills = [
     },
     {
         name: 'Tailwind CSS',
-        icon: 'https://tailwindcss.com/_next/static/media/tailwindcss-mark.6ea76c3beba0b3b7305f6c26b4032dab.svg',
+        icon: 'https://tailwindcss.com/_next/static/media/tailwindcss-mark.d52e9897.svg',
         description: 'Efficient in creating custom UIs quickly with utility classes.',
         proficiency: 85
     },
