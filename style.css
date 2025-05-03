@@ -92,7 +92,9 @@
             -webkit-backdrop-filter: blur(5px);
         }
         #mobile-menu.glass {
-            background: rgba(255, 255, 255, 0.341);
+            background: rgba(255, 255, 255, 0.767);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
         }
         .text-white {
             color: #1a1a1a !important;
