@@ -22,12 +22,14 @@ navLinks.forEach(link => {
     a.className = `font-medium text-white hover:text-pink-400 transition-colors`;
     desktopNav.appendChild(a);
 
-    const m = a.cloneNode(true); m.className = `font-medium text-white hover:text-pink-400 transition-colors`;
+    const m = a.cloneNode(true);
+    m.className = `font-medium text-white hover:text-pink-400 transition-colors`;
     m.onclick = () => {
         mobileMenu.classList.add('hidden');
         mobileOpen = false;
         updateToggleIcon();
-    }; mobileNav.appendChild(m);
+    };
+    mobileNav.appendChild(m);
 });
 
 menuToggle.addEventListener('click', () => {
@@ -42,7 +44,7 @@ window.addEventListener('scroll', () => {
         scrollY > 50
             ? 'bg-gradient-to-r from-indigo-900 to-purple-900 shadow-lg'
             : 'bg-transparent'
-        }`;
+    }`;
 
     const position = scrollY + 200;
     navLinks.forEach(link => {
@@ -73,7 +75,7 @@ function updateToggleIcon() {
         lucide.createIcons();
     } else {
         // If lucide is not defined, you might want to use a fallback icon or log an error.
-        console.error('Lucide is not defined.  Make sure to include the Lucide library.');
+        console.error('Lucide is not defined. Make sure to include the Lucide library.');
         // You could set a default icon here using innerHTML, e.g.,
         // menuToggle.innerHTML = mobileOpen ? 'Close' : 'Menu';
     }
@@ -136,20 +138,6 @@ skills.forEach(skill => {
 });
 
 
-{/* <section id="projects" class="container mx-auto px-4 py-16">
-    <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">
-            My <span class="bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">Projects</span>
-        </h2>
-        <div class="w-20 h-1 bg-gradient-to-r from-pink-500 to-violet-500 mx-auto"></div>
-        <p class="mt-4 text-gray-300 max-w-2xl mx-auto">
-            Here are some of my recent projects. Each represents unique challenges and solutions.
-        </p>
-    </div>
-    <div id="project-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-    </div>
-</section> */}
-
 const projects = [
     {
         title: 'Ecommerce Website',
@@ -186,42 +174,42 @@ projects.forEach(project => {
 
     const demoLink = project.demo
         ? `<a href="${project.demo}" target="_blank" rel="noopener noreferrer"
-            class="flex items-center gap-1 text-sm text-pink-400 hover:text-pink-300 transition-colors">
-            <i data-lucide="external-link" class="w-4 h-4"></i> Live Demo
-        </a>` : '';
+                    class="flex items-center gap-1 text-sm text-pink-400 hover:text-pink-300 transition-colors">
+                    <i data-lucide="external-link" class="w-4 h-4"></i> Live Demo
+                </a>` : '';
 
     const githubLink = project.github
         ? `<a href="${project.github}" target="_blank" rel="noopener noreferrer"
-            class="flex items-center gap-1 text-sm text-indigo-400 hover:text-indigo-300 transition-colors">
-            <i data-lucide="github" class="w-4 h-4"></i> GitHub
-        </a>` : '';
+                    class="flex items-center gap-1 text-sm text-indigo-400 hover:text-indigo-300 transition-colors">
+                    <i data-lucide="github" class="w-4 h-4"></i> GitHub
+                </a>` : '';
 
     let imageContent = '';
     if (Array.isArray(project.image)) {
         const carouselId = "projectCarousel" + project.title.replace(/\s+/g, '');
         imageContent = `<div id="${carouselId}" class="carousel slide relative" data-bs-ride="carousel">
-            <div class="carousel-inner rounded-t-xl h-48">`;
+                <div class="carousel-inner rounded-t-xl h-48">`;
         project.image.forEach((img, index) => {
             imageContent += `<div class="carousel-item ${index === 0 ? 'active' : ''} h-48">
-                <img src="${img}" class="block w-full h-full object-cover" alt="${project.title} ${index + 1}">
-            </div>`;
+                    <img src="${img}" class="block w-full h-full object-cover" alt="${project.title} ${index + 1}">
+                </div>`;
         });
         imageContent += `</div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#${carouselId}" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#${carouselId}" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>`;
+                <button class="carousel-control-prev" type="button" data-bs-target="#${carouselId}" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#${carouselId}" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>`;
     } else {
         imageContent = `<div class="relative h-48 overflow-hidden rounded-t-xl">
-            <img src="${project.image}" alt="${project.title}"
-                class="w-full h-full object-cover transition-transform hover:scale-105 duration-500" />
-            <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/80 to-transparent"></div>
-        </div>`;
+                <img src="${project.image}" alt="${project.title}"
+                    class="w-full h-full object-cover transition-transform hover:scale-105 duration-500" />
+                <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/80 to-transparent"></div>
+            </div>`;
     }
 
     const card = `
@@ -243,11 +231,14 @@ projects.forEach(project => {
 
     projectContainer.innerHTML += card;
 });
+
+// Initialize Bootstrap carousels after the project cards are added to the DOM
 document.querySelectorAll('.carousel').forEach(carouselElement => {
     new bootstrap.Carousel(carouselElement);
 });
 
 
+// ... (rest of your existing JavaScript code)
 
 const form = document.getElementById('contactForm');
 const successMessage = document.getElementById('successMessage');
@@ -255,14 +246,30 @@ const successMessage = document.getElementById('successMessage');
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     const formData = new FormData(form);
-    console.log('Form Data:', Object.fromEntries(formData.entries()));
 
-    successMessage.classList.remove('d-none');
-
-    form.reset();
-
-    setTimeout(() => {
-        successMessage.classList.add('d-none');
-    }, 4000);
+    fetch('/send-email', { // The API endpoint you created on the backend
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(Object.fromEntries(formData.entries()))
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.message === 'Email sent successfully') {
+            successMessage.classList.remove('d-none');
+            form.reset();
+            setTimeout(() => {
+                successMessage.classList.add('d-none');
+            }, 4000);
+        } else {
+            // Optionally display an error message to the user
+            console.error('Email sending failed:', data.message);
+            alert('Failed to send message. Please try again later.');
+        }
+    })
+    .catch(error => {
+        console.error('There was an error sending the email:', error);
+        alert('Failed to send message. Please try again later.');
+    });
 });
-
