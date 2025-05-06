@@ -247,7 +247,7 @@ form.addEventListener('submit', function (e) {
     e.preventDefault();
     const formData = new FormData(form);
 
-    fetch('/send-email', { // The API endpoint you created on the backend
+    fetch('/send-email', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -259,17 +259,13 @@ form.addEventListener('submit', function (e) {
         if (data.message === 'Email sent successfully') {
             successMessage.classList.remove('d-none');
             form.reset();
-            setTimeout(() => {
-                successMessage.classList.add('d-none');
-            }, 4000);
+            setTimeout(() => successMessage.classList.add('d-none'), 4000);
         } else {
-            // Optionally display an error message to the user
-            console.error('Email sending failed:', data.message);
             alert('Failed to send message. Please try again later.');
         }
     })
     .catch(error => {
-        console.error('There was an error sending the email:', error);
+        console.error('Error:', error);
         alert('Failed to send message. Please try again later.');
     });
 });
