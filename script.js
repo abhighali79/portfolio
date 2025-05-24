@@ -144,12 +144,16 @@ const projects = [
         description: 'An e-commerce website is an online platform for businesses or individuals to sell products or services to customers.',
         technologies: ['HTML', 'CSS', 'JavaScript'],
         image: [
-            './images/auction1.png',
-            './images/auction2.png',
-            './images/auction3.png'
+            './images/ecom1.png',
+            './images/ecom2.png',
+            './images/ecom3.png',
+            './images/ecom4.png',
+            './images/ecom5.png',
+            './images/ecom6.png',
+            './images/ecom7.png',
+            './images/ecom8.png'
         ],
-        demo: 'https://your-auction-demo.com',
-        github: 'https://github.com/yourname/auction-system'
+        github: 'https://github.com/abhighali79/intern-project.git'
     },
     {
         title: 'Student Result Analysis',
@@ -158,9 +162,13 @@ const projects = [
         image: [
             './images/rms1.png',
             './images/rms2.png',
-            './images/rms3.png'
+            './images/rms3.png',
+            './images/rms4.png',
+            './images/rms5.png',
+            './images/rms6.png',
+            './images/rms7.png',
+            './images/rms8.png'
         ],
-        demo: '',
         github: 'https://github.com/yourname/student-result-analyzer'
     }
 ];
